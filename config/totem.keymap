@@ -97,15 +97,15 @@
         Base {
             display-name = "Base";
             bindings = <
-         &kp Q       &kp W       &kp E             &kp R        &kp T          &kp Y        &kp U        &kp I            &kp O       &kp P
-         &hm LGUI A  &hm LALT S  &hm LEFT_SHIFT D  &hm LCTRL F  &hm LCTRL G    &kp H        &hm LCTRL J  &hm LSHFT K      &hm LALT L  &hm LEFT_GUI SEMICOLON
-&kp DEL  &kp Z       &kp X       &kp C             &kp V        &kp B          &kp N        &kp M        &col_mm          &mm_dot     &kp SLASH               &kp BACKSPACE
-                                 &lt 3 ESC         &lt 2 TAB    &lt 1 ENTER    &lt 1 SPACE  &sk LSHIFT   &lt 3 RIGHT_ALT
+           &kp Q       &kp W       &kp E             &kp R        &kp T          &kp Y        &kp U        &kp I            &kp O       &kp P
+           &hm LGUI A  &hm LALT S  &hm LEFT_SHIFT D  &hm LCTRL F  &hm LCTRL G    &kp H        &hm LCTRL J  &hm LSHFT K      &hm LALT L  &hm LEFT_GUI SEMICOLON
+&lt 4 DEL  &kp Z       &kp X       &kp C             &kp V        &kp B          &kp N        &kp M        &col_mm          &mm_dot     &kp SLASH               &kp BACKSPACE
+                                   &lt 3 ESC         &lt 2 TAB    &lt 1 ENTER    &lt 1 SPACE  &sk LSHIFT   &lt 3 RIGHT_ALT
             >;
         };
 
-        Nav {
-            display-name = "Nav";
+        Func {
+            display-name = "Function and navigation";
             bindings = <
         &kp F1   &kp F2   &kp F3  &kp F4       &kp PRINTSCREEN      &kp LG(LA(SPACE))  &trans         &trans       &kp F9     &kp F10
         &kp F5   &kp F6   &kp F7  &kp F8       &kp LG(LC(LS(T)))    &kp LEFT           &kp DOWN       &kp UP       &kp RIGHT  &trans
@@ -115,7 +115,7 @@
         };
 
         Sym {
-            display-name = "Sym";
+            display-name = "Symbols";
             bindings = <
         &kp EXCL          &kp AT             &kp HASH              &kp DOLLAR             &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp STAR        &kp BACKSLASH  &kp PIPE
         &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans         &trans     &kp MINUS      &kp UNDERSCORE  &kp PLUS       &kp EQUAL
@@ -124,8 +124,8 @@
             >;
         };
 
-        Fun {
-            display-name = "Fun";
+        Macro {
+            display-name = "Macro and Numpad";
             bindings = <
         &kp F13  &kp F14  &kp F15  &kp F16  &trans    &kp MINUS   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
         &kp F17  &kp F18  &kp F19  &kp F20  &trans    &kp SLASH   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK
@@ -134,7 +134,7 @@
             >;
         };
 
-        layer_4 {
+        etc {
             bindings = <
         &outin  &pw     &mkp MB4          &mkp MB5           &trans    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))  &trans    &trans  &trans  &trans  &trans  &trans
