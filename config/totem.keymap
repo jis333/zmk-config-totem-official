@@ -72,7 +72,14 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        HanEng {
+            bindings = <&kp LANG_HANGEUL>;
+            key-positions = <16 17>;
+        };
+    };
 
     macros {
         lcopy: line_copy {
@@ -113,9 +120,9 @@
         Func {
             display-name = "Function and navigation";
             bindings = <
-        &kp F1   &kp F2   &kp F3  &kp F4       &kp PRINTSCREEN      &kp LG(LA(SPACE))  &trans         &trans       &kp F9     &kp F10
-        &kp F5   &kp F6   &kp F7  &kp F8       &kp LG(LC(LS(T)))    &kp LEFT           &kp DOWN       &kp UP       &kp RIGHT  &trans
-&trans  &kp F11  &kp F12  &lcopy  &kp LC(F13)  &kp LG(LC(LS(S)))    &kp HOME           &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans   &trans
+        &kp F1   &kp F2   &kp F3  &kp F4       &kp PRINTSCREEN      &kp LG(LA(SPACE))  &kp F9         &kp F10      &trans     &trans
+        &kp F5   &kp F6   &kp F7  &kp F8       &kp LG(LC(LS(T)))    &kp LEFT           &kp DOWN       &kp UP       &kp RIGHT  &kp LANG_HANJA
+&trans  &kp F11  &kp F12  &lcopy  &kp LC(F13)  &kp LG(LC(LS(S)))    &kp HOME           &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp INS         &trans
                           &trans  &trans       &trans               &trans             &trans         &trans
             >;
         };
@@ -142,7 +149,7 @@
 
         etc {
             bindings = <
-        &outin  &pw     &kp LA(LEFT)      &kp LA(RIGHT)      &trans       &trans     &trans   &trans   &trans  &trans
+        &outin  &pw     &kp LA(LEFT)      &kp LA(RIGHT)      &trans       &trans     &trans   &trans   &pw     &outin
         &trans  &trans  &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))  &trans       &trans     &trans   &trans   &trans  &trans
 &trans  &trans  &trans  &trans            &trans             &trans       &trans     &trans   &trans   &trans  &trans  &trans
                         &kp RIGHT_ALT     &sk LEFT_SHIFT     &kp SPACE    &kp ENTER  &kp TAB  &kp ESC
