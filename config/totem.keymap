@@ -169,33 +169,41 @@
 &lt 4 DEL  &kp Z       &kp X       &kp C         &kp V        &kp B          &kp N        &kp M        &col_mm      &mm_dot     &kp SLASH           &lt 4 BACKSPACE
                                    &lt 3 ESC     &lt 2 TAB    &lt 1 ENTER    &lt 1 SPACE  &sk LSHIFT   &lt 3 RALT
             >;
+
+            label = "Base";
         };
 
-        Fun {
+        FunctionArrow {
             bindings = <
         &kp F1   &kp F2   &kp F3  &kp F4       &kp PRINTSCREEN      &kp LG(LA(SPACE))  &kp F9         &kp F10      &trans     &trans
         &kp F5   &kp F6   &kp F7  &kp F8       &kp LG(LC(LS(T)))    &kp LEFT           &kp DOWN       &kp UP       &kp RIGHT  &kp LANG_HANJA
 &trans  &kp F11  &kp F12  &lcopy  &kp LC(F13)  &kp LG(LC(LS(S)))    &kp HOME           &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp INS         &trans
                           &trans  &trans       &trans               &trans             &trans         &trans
             >;
+
+            label = "Fun";
         };
 
-        Sym {
+        Symbols {
             bindings = <
         &kp EXCL          &kp AT             &kp HASH              &kp DOLLAR             &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp STAR        &kp BACKSLASH  &kp PIPE
         &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans         &trans     &kp MINUS      &kp UNDERSCORE  &kp PLUS       &kp EQUAL
 &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LESS_THAN         &kp GREATER_THAN       &trans         &trans     &kp TILDE      &kp GRAVE       &trans         &trans     &trans
                                              &trans                &trans                 &trans         &trans     &trans         &trans
             >;
+
+            label = "Sym";
         };
 
-        Macro {
+        MacroNumpad {
             bindings = <
         &kp F13  &kp F14  &kp F15  &kp F16  &trans    &kp MINUS     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
         &kp F17  &kp F18  &kp F19  &kp F20  &trans    &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK
 &trans  &kp F21  &kp F22  &kp F23  &kp F24  &trans    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL     &trans
                           &trans   &trans   &trans    &trans        &trans        &trans
             >;
+
+            label = "Num";
         };
 
         etc {
