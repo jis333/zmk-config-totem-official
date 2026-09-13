@@ -94,7 +94,7 @@
         };
 
         Compose {
-            bindings = <&kp RIGHT_ALT>;
+            bindings = <&kp RALT>;
             key-positions = <22 23>;
             layers = <0>;
         };
@@ -165,10 +165,10 @@
         Base {
             display-name = "Base";
             bindings = <
-           &kp Q       &kp W       &kp E             &kp R        &kp T          &kp Y        &kp U        &kp I            &kp O       &kp P
-           &hm LGUI A  &hm LALT S  &hm LEFT_SHIFT D  &hm LCTRL F  &hm LCTRL G    &td_han      &hm LCTRL J  &hm LSHFT K      &hm LALT L  &hm LEFT_GUI SEMICOLON
-&lt 4 DEL  &kp Z       &kp X       &kp C             &kp V        &kp B          &kp N        &kp M        &col_mm          &mm_dot     &kp SLASH               &lt 4 BACKSPACE
-                                   &lt 3 ESC         &lt 2 TAB    &lt 1 ENTER    &lt 1 SPACE  &sk LSHIFT   &lt 3 RIGHT_ALT
+           &kp Q       &kp W       &kp E         &kp R        &kp T          &kp Y        &kp U        &kp I        &kp O       &kp P
+           &hm LGUI A  &hm LALT S  &hm LSHIFT D  &hm LCTRL F  &hm LCTRL G    &kp H        &hm LCTRL J  &hm LSHFT K  &hm LALT L  &hm LGUI SEMICOLON
+&lt 4 DEL  &kp Z       &kp X       &kp C         &kp V        &kp B          &kp N        &kp M        &col_mm      &mm_dot     &kp SLASH           &lt 4 BACKSPACE
+                                   &lt 3 ESC     &lt 2 TAB    &lt 1 ENTER    &lt 1 SPACE  &sk LSHIFT   &lt 3 RALT
             >;
         };
 
