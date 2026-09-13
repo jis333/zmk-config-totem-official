@@ -77,6 +77,31 @@
 
         HanEng {
             bindings = <&kp LANG_HANGEUL>;
+            key-positions = <12 13>;
+        };
+
+        PgUp {
+            bindings = <&kp PAGE_UP>;
+            key-positions = <7 8>;
+        };
+
+        PgDn {
+            bindings = <&kp PAGE_DOWN>;
+            key-positions = <17 18>;
+        };
+
+        Compose {
+            bindings = <&kp RIGHT_ALT>;
+            key-positions = <11 12>;
+        };
+
+        Home {
+            bindings = <&kp HOME>;
+            key-positions = <6 7>;
+        };
+
+        End {
+            bindings = <&kp END>;
             key-positions = <16 17>;
         };
     };
