@@ -171,7 +171,7 @@
             >;
         };
 
-        Func {
+        Fun {
             bindings = <
         &kp F1   &kp F2   &kp F3  &kp F4       &kp PRINTSCREEN      &kp LG(LA(SPACE))  &kp F9         &kp F10      &trans     &trans
         &kp F5   &kp F6   &kp F7  &kp F8       &kp LG(LC(LS(T)))    &kp LEFT           &kp DOWN       &kp UP       &kp RIGHT  &kp LANG_HANJA
