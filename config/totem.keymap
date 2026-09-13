@@ -46,29 +46,22 @@
             bindings = <&kp>, <&kp>;
         };
 
-        col_mm: col_mm {
+        col_sq: col_sq {
             compatible = "zmk,behavior-mod-morph";
-            label = ",’";
+            label = "COL_SQ";
             bindings = <&kp COMMA>, <&kp SINGLE_QUOTE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mm_dot: mm_dot {
+        dot_dq: dot_dq {
             compatible = "zmk,behavior-mod-morph";
-            label = ".”";
+            label = "DOT_DQ";
             bindings = <&kp DOT>, <&kp DOUBLE_QUOTES>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        td_han: td_han {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_HAN";
-            #binding-cells = <0>;
-            bindings = <&kp H>, <&kp LANG_HANGEUL>;
         };
     };
 
@@ -93,8 +86,8 @@
             layers = <0>;
         };
 
-        Compose {
-            bindings = <&kp RALT>;
+        MoveLeft {
+            bindings = <&kp LG(LC(LS(LEFT)))>;
             key-positions = <22 23>;
             layers = <0>;
         };
@@ -134,6 +127,12 @@
             key-positions = <2 3>;
             layers = <0>;
         };
+
+        MoveRight {
+            bindings = <&kp LG(LC(LS(RIGHT)))>;
+            key-positions = <23 24>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -166,14 +165,14 @@
             bindings = <
            &kp Q       &kp W       &kp E         &kp R        &kp T          &kp Y        &kp U        &kp I        &kp O       &kp P
            &hm LGUI A  &hm LALT S  &hm LSHIFT D  &hm LCTRL F  &hm LCTRL G    &kp H        &hm LCTRL J  &hm LSHFT K  &hm LALT L  &hm LGUI SEMICOLON
-&lt 4 DEL  &kp Z       &kp X       &kp C         &kp V        &kp B          &kp N        &kp M        &col_mm      &mm_dot     &kp SLASH           &lt 4 BACKSPACE
-                                   &lt 3 ESC     &lt 2 TAB    &lt 1 ENTER    &lt 1 SPACE  &sk LSHIFT   &lt 3 RALT
+&lt 3 DEL  &kp Z       &kp X       &kp C         &kp V        &kp B          &kp N        &kp M        &col_sq      &dot_dq     &kp SLASH           &lt 3 BACKSPACE
+                                   &lt 2 ESC     &lt 3 TAB    &lt 1 ENTER    &lt 1 SPACE  &sk LSHIFT   &lt 2 RALT
             >;
 
             label = "Base";
         };
 
-        FunctionArrow {
+        Expansion {
             bindings = <
         &kp F1   &kp F2   &kp F3  &kp F4       &kp PRINTSCREEN      &kp LG(LA(SPACE))  &kp TILDE      &kp GRAVE    &kp BSLH   &kp PIPE
         &kp F5   &kp F6   &kp F7  &kp F8       &kp LG(LC(LS(T)))    &kp LEFT           &kp DOWN       &kp UP       &kp RIGHT  &kp LANG_HANJA
@@ -181,21 +180,10 @@
                           &trans  &trans       &trans               &trans             &trans         &trans
             >;
 
-            label = "Fun";
+            label = "Fn";
         };
 
         Symbols {
-            bindings = <
-        &kp F13  &kp F14  &kp F15  &kp F16  &trans    &kp CARET  &kp AMPERSAND  &kp STAR        &kp BACKSLASH  &kp PIPE
-        &kp F17  &kp F18  &kp F19  &kp F20  &trans    &trans     &kp MINUS      &kp UNDERSCORE  &kp PLUS       &kp EQUAL
-&trans  &kp F21  &kp F22  &kp F23  &kp F24  &trans    &trans     &kp TILDE      &kp GRAVE       &trans         &trans     &trans
-                          &trans   &trans   &trans    &trans     &trans         &trans
-            >;
-
-            label = "Sym";
-        };
-
-        MacroNumpad {
             bindings = <
         &kp EXCL          &kp AT             &kp HASH              &kp DOLLAR             &kp PERCENT    &kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp STAR
         &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET      &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL
@@ -203,17 +191,18 @@
                                              &trans                &trans                 &trans         &trans        &trans        &trans
             >;
 
-            label = "Num";
+            label = "Sym";
         };
 
-        etc {
+        Macro {
             bindings = <
-        &outin  &pw     &kp LA(LEFT)      &kp LA(RIGHT)      &trans       &trans     &trans   &trans   &pw     &outin
-        &trans  &trans  &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))  &trans       &trans     &trans   &trans   &trans  &trans
-&trans  &trans  &trans  &trans            &trans             &trans       &trans     &trans   &trans   &trans  &trans  &trans
-                        &kp RIGHT_ALT     &sk LEFT_SHIFT     &kp SPACE    &kp ENTER  &kp TAB  &kp ESC
+        &kp F13  &kp F14  &kp F15   &kp F16    &trans       &trans     &trans   &trans   &pw     &outin
+        &kp F17  &kp F18  &kp F19   &kp F20    &trans       &trans     &trans   &trans   &trans  &trans
+&trans  &kp F21  &kp F22  &kp F23   &kp F24    &trans       &trans     &trans   &trans   &trans  &trans  &trans
+                          &kp RALT  &sk LSHFT  &kp SPACE    &kp ENTER  &kp TAB  &kp ESC
             >;
+
+            label = "Macro";
         };
     };
 };
-
