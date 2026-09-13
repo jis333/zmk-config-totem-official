@@ -77,7 +77,7 @@
 
         HanEng {
             bindings = <&kp LANG_HANGEUL>;
-            key-positions = <12 13>;
+            key-positions = <28 29>;
         };
 
         PgUp {
@@ -92,7 +92,7 @@
 
         Compose {
             bindings = <&kp RIGHT_ALT>;
-            key-positions = <11 12>;
+            key-positions = <22 23>;
         };
 
         Home {
@@ -103,6 +103,26 @@
         End {
             bindings = <&kp END>;
             key-positions = <16 17>;
+        };
+
+        LeftDesktop {
+            bindings = <&kp LG(LC(LEFT))>;
+            key-positions = <11 12>;
+        };
+
+        RightDesktop {
+            bindings = <&kp LG(LC(RIGHT))>;
+            key-positions = <12 13>;
+        };
+
+        Back {
+            bindings = <&kp LA(LEFT)>;
+            key-positions = <1 2>;
+        };
+
+        Forward {
+            bindings = <&kp LA(RIGHT)>;
+            key-positions = <2 3>;
         };
     };
 
